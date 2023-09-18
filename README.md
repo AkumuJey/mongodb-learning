@@ -10,3 +10,4 @@ npm install express
 # Third party middleware installations
 npm install express uuid helmet cors morgan
 
+# Add REST Client VS code extension
