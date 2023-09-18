@@ -6,3 +6,7 @@ node init -y
 # Adding express js dependencies
 
 npm install express
+
+# Third party middleware installations
+npm install express uuid helmet cors morgan
+
