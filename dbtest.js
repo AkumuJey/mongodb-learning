@@ -18,7 +18,13 @@ const app = async () => {
         console.log('Connected to server')
         const db = client.db(dbName)
         const col = db.collection('people')
-        await col.insertOne(personDocument)
+        await col.updateOne(
+            {first: 'Alan', last: 'Turing'},
+            {$set: personDocument},
+            {upsert: true}
+            )
+        const allResults = await col.find().toArray();
+        console.log(allResults)
     } catch (error) {
         console.log(error.stack)
     }
