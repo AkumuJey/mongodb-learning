@@ -18,6 +18,7 @@ const app = async () => {
         console.log('Connected to server')
         const db = client.db(dbName)
         const col = db.collection('people')
+        await col.insertOne(personDocument)
     } catch (error) {
         console.log(error.stack)
     }
